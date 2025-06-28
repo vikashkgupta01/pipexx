@@ -55,6 +55,12 @@ public class LicController {
        return new ResponseEntity<>(policy, HttpStatus.ACCEPTED);
     }
 
+    @GetMapping("/security-check")
+    public String securityStatus() {
+        return "Security OK from System A";
+    }
+
+
 
 
 
