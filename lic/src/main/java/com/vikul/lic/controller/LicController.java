@@ -61,6 +61,12 @@ public class LicController {
     }
 
 
+    @GetMapping("/test")
+    public ResponseEntity<String> test(){
+        return new ResponseEntity<>("Runnning!!!", HttpStatus.OK);
+    }
+
+
 
 
 
