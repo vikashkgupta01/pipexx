@@ -66,9 +66,14 @@ public class LicController {
         return new ResponseEntity<>("Runnning!!!", HttpStatus.OK);
     }
 
+
     @GetMapping("/systemA")
     public String testSystemA(){
         return "change from System A";
+
+    @GetMapping("/systemB")
+    public String testSystemB(){
+        return "change from SystemB";
     }
 
 
