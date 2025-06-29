@@ -76,7 +76,6 @@ public class LicController {
 
     @GetMapping("/reoveCommit")
     public String removeUnwantedCommit(){
-        System.out.println("Printing unwanted line!!!");
         return "print";
     }
 
