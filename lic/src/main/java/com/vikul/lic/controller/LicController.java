@@ -1,6 +1,5 @@
 package com.vikul.lic.controller;
 
-import com.fasterxml.jackson.core.util.BufferRecycler;
 import com.vikul.lic.dao.ILicRepo;
 import com.vikul.lic.dto.PolicyDto;
 import com.vikul.lic.entity.Policy;
@@ -11,9 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.BufferedReader;
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/lic/v1")
@@ -68,12 +65,19 @@ public class LicController {
 
 
     @GetMapping("/systemA")
-    public String testSystemA(){
+    public String testSystemA() {
         return "change from System A";
+    }
 
     @GetMapping("/systemB")
     public String testSystemB(){
         return "change from SystemB";
+    }
+
+    @GetMapping("/reoveCommit")
+    public String removeUnwantedCommit(){
+        System.out.println("Printing unwanted line!!!");
+        return "print";
     }
 
 
